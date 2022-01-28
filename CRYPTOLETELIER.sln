@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRYPTOLETELIER", "CRYPTOLETELIER\CRYPTOLETELIER.csproj", "{20243B81-5E7E-43EF-B711-094C903D3D3B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20243B81-5E7E-43EF-B711-094C903D3D3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20243B81-5E7E-43EF-B711-094C903D3D3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20243B81-5E7E-43EF-B711-094C903D3D3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20243B81-5E7E-43EF-B711-094C903D3D3B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FDE2D17B-A361-4963-A2FF-3CE1D59C4F0D}
+	EndGlobalSection
+EndGlobal

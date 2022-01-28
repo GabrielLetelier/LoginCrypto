@@ -1,0 +1,31 @@
+﻿<Window x:Class="CRYPTOLETELIER.ControleUsuario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRYPTOLETELIER"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="Controle de Usuários" Height="450" Width="800">
+    <Grid Margin="0,0,2,-5" Background="#FF061342">
+        <ListView Margin="30,22,102,199" x:Name="lstvUsuarios"
+                  SelectionChanged="lstvUsuarios_SelectionChanged"
+                  ItemsSource="{Binding}" MinWidth="350" MinHeight="100" Background="#BFF3D9D2">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding ID}"/>
+                    <GridViewColumn Header="Login" DisplayMemberBinding="{Binding Login}"/>
+                    <GridViewColumn Header="Senha" DisplayMemberBinding="{Binding Senha}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox Margin="124,259,400,132" x:Name="txtUsuario" DataContext="{Binding SelectedItem, ElementName=lstvUsuarios}" Background="#FFEFFAC3" TextChanged="txtUsuario_TextChanged" />
+        <TextBox Height="32" Margin="124,0,400,96" x:Name="txtSenha" VerticalAlignment="Bottom" DataContext="{Binding SelectedItem, ElementName=lstvUsuarios}" Background="#7DEBE88D" CharacterCasing="Normal" />
+        <Label Margin="38,259,678,132" x:Name="label1" Content="Usuário :" Background="#FFF5EFEF"/>
+        <Label Height="30" Margin="38,0,678,96" x:Name="label2" VerticalAlignment="Bottom" Content="Senha :" Background="#FFF3EFEF"/>
+        <Button Height="26" Margin="36,0,678,34" x:Name="btnIncluir" VerticalAlignment="Bottom" Click="btnIncluir_Click" Content="Incluir"/>
+        <Button Height="26" Margin="124,0,0,34" x:Name="btnAtualizar" VerticalAlignment="Bottom" Click="btnAtualizar_Click" HorizontalAlignment="Left" Width="75" Content="Atualizar"/>
+        <Button Height="26" Margin="220,0,0,34" x:Name="btnDeletar" VerticalAlignment="Bottom" Click="btnDeletar_Click" HorizontalAlignment="Left" Width="74" Content="Deletar"/>
+        <Button Height="28" Margin="311,0,400,34" x:Name="btnLimpar" VerticalAlignment="Bottom" Click="btnLimpar_Click" Content="Limpar"/>
+    </Grid>
+</Window>
