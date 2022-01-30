@@ -16,7 +16,6 @@ namespace CRYPTOLETELIER
 
         public static void Insert(Usuario usuario)
         {
-            // Gerando na tabela
             ListaUsuarios listaUsuarios = Get();
 
             int incrementoID = listaUsuarios.Usuarios.Last().ID + 1;
@@ -71,8 +70,7 @@ namespace CRYPTOLETELIER
 
             usuarioJson.Login = usuario.Login;
 
-            if(usuario.Senha != "***")
-                usuarioJson.Senha = Encrypt.EncryptData(usuario.Senha);
+            usuarioJson.Senha = Encrypt.EncryptData(usuario.Senha);
 
             using (StreamWriter file = File.CreateText(PathJsonUsuarios))
             {
